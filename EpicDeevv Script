@@ -1,0 +1,80 @@
+--================================--
+--        MADE BY EpicDeevv 👑
+--   Muscle Legends Private Script
+--================================--
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+--================ CONFIG ================--
+local AutoStrength = true
+local AutoRebirth = true
+local AutoKill = true
+local AutoTrade = true
+
+local StrengthPerTick = 10
+local MaxStrength = 500000
+local RebirthCost = 10000
+local KillDamage = 999999
+
+--================ LEADERSTATS ================--
+local leaderstats = player:FindFirstChild("leaderstats")
+if not leaderstats then
+    leaderstats = Instance.new("Folder", player)
+    leaderstats.Name = "leaderstats"
+end
+
+local Strength = leaderstats:FindFirstChild("Strength") or Instance.new("IntValue", leaderstats)
+Strength.Name = "Strength"
+
+local Rebirths = leaderstats:FindFirstChild("Rebirths") or Instance.new("IntValue", leaderstats)
+Rebirths.Name = "Rebirths"
+
+--================ AUTO STRENGTH ================--
+task.spawn(function()
+    while AutoStrength do
+        if Strength.Value < MaxStrength then
+            Strength.Value += StrengthPerTick
+        end
+        task.wait(0.2)
+    end
+end)
+
+--================ AUTO REBIRTH ================--
+task.spawn(function()
+    while AutoRebirth do
+        if Strength.Value >= RebirthCost then
+            Strength.Value = 0
+            Rebirths.Value += 1
+        end
+        task.wait(1)
+    end
+end)
+
+--================ AUTO KILL (NPCs) ================--
+task.spawn(function()
+    while AutoKill do
+        for _, npc in pairs(workspace:GetChildren()) do
+            if npc:FindFirstChild("Humanoid") and npc ~= character then
+                npc.Humanoid.Health = 0
+            end
+        end
+        task.wait(1)
+    end
+end)
+
+--================ AUTO TRADE ================--
+task.spawn(function()
+    while AutoTrade do
+        for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+            if otherPlayer ~= player then
+                print("Auto trade request sent to:", otherPlayer.Name)
+                -- Placeholder for trade logic
+            end
+        end
+        task.wait(5)
+    end
+end)
+
+print("🔥 Muscle Legends Private Script Loaded | Made by EpicDeevv 🔥")
+
