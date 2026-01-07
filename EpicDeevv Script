@@ -1,5 +1,5 @@
 --================================--
---        MADE BY EpicDeevv 👑
+--        MADE BY Fang hub 👑
 --   Muscle Legends Private Script
 --================================--
 
@@ -76,5 +76,5 @@ task.spawn(function()
     end
 end)
 
-print("🔥 Muscle Legends Private Script Loaded | Made by EpicDeevv 🔥")
+print("🔥 Muscle Legends public Script Loaded | Made by EpicDeevv 🔥")
 
