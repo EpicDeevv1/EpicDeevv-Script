@@ -1,0 +1,215 @@
+--// EVADE V2 FIXED & OPTIMIZED
+--// Cleaned, stabilized, single-loop logic
+
+--// SERVICES
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Lighting = game:GetService("Lighting")
+
+local LocalPlayer = Players.LocalPlayer
+local WorkspacePlayers = workspace.Game.Players
+
+--// UI
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+
+--// STATE
+local State = {
+    MoneyFarm = false,
+    AfkFarm = false,
+    AutoRespawn = false,
+    AutoDrink = false,
+    NoCameraShake = false,
+    AutoChat = false,
+    AutoWhistle = false,
+}
+
+local TargetSpeed = 16
+local TargetJump = 50
+
+--// NOTIFY
+local function Notify(t, c, time)
+    OrionLib:MakeNotification({
+        Name = "Evade V2 Rework",
+        Content = c,
+        Image = "rbxassetid://4483345998",
+        Time = time or 3
+    })
+end
+
+Notify("Evade V2", "Loading...", 3)
+
+--// WINDOW
+local Window = OrionLib:MakeWindow({
+    Name = "Evade V2 (Rework)",
+    HidePremium = false,
+    IntroText = "Stabilized Version",
+    SaveConfig = false
+})
+
+--// UTILS
+local function GetDownedPlayer()
+    for _, v in pairs(WorkspacePlayers:GetChildren()) do
+        if v:GetAttribute("Downed") then
+            return v
+        end
+    end
+end
+
+--// CORE LOOP (ONE LOOP ONLY)
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        local char = LocalPlayer.Character
+        if not char then return end
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+
+        if hum then
+            hum.WalkSpeed = TargetSpeed
+            hum.JumpPower = TargetJump
+        end
+
+        if State.NoCameraShake then
+            local camShake = LocalPlayer.PlayerScripts:FindFirstChild("CameraShake")
+            if camShake then
+                camShake.Value = CFrame.identity
+            end
+        end
+
+        if State.AutoRespawn and char:GetAttribute("Downed") then
+            ReplicatedStorage.Events.Respawn:FireServer()
+        end
+
+        if State.MoneyFarm then
+            if char:GetAttribute("Downed") then
+                ReplicatedStorage.Events.Respawn:FireServer()
+            else
+                local downed = GetDownedPlayer()
+                if downed and downed:FindFirstChild("HumanoidRootPart") then
+                    hrp.CFrame = downed.HumanoidRootPart.CFrame * CFrame.new(0,3,0)
+                    ReplicatedStorage.Events.Revive.RevivePlayer:FireServer(tostring(downed), true)
+                end
+            end
+        end
+
+        if State.AfkFarm and hrp then
+            hrp.CFrame = CFrame.new(6007,7005,8005)
+        end
+    end)
+end)
+
+--// TIMED TASKS
+task.spawn(function()
+    while task.wait(6) do
+        if State.AutoDrink then
+            ReplicatedStorage.Events.UseUsable:FireServer("Cola")
+        end
+    end
+end)
+
+task.spawn(function()
+    while task.wait(1) do
+        if State.AutoChat then
+            ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+                "Hydra Network on top", "All"
+            )
+        end
+    end
+end)
+
+task.spawn(function()
+    while task.wait(5) do
+        if State.AutoWhistle then
+            ReplicatedStorage.Events.Whistle:FireServer()
+        end
+    end
+end)
+
+--// UI TABS
+local MainTab = Window:MakeTab({Name="Main",Icon="",PremiumOnly=false})
+local FunTab = Window:MakeTab({Name="Fun",Icon="",PremiumOnly=false})
+local MiscTab = Window:MakeTab({Name="Misc",Icon="",PremiumOnly=false})
+
+--// TOGGLES
+MainTab:AddToggle({
+    Name="Money Farm",
+    Default=false,
+    Callback=function(v) State.MoneyFarm = v end
+})
+
+MainTab:AddToggle({
+    Name="AFK Farm",
+    Default=false,
+    Callback=function(v) State.AfkFarm = v end
+})
+
+MainTab:AddToggle({
+    Name="Auto Respawn",
+    Default=false,
+    Callback=function(v) State.AutoRespawn = v end
+})
+
+MainTab:AddToggle({
+    Name="No Camera Shake",
+    Default=false,
+    Callback=function(v) State.NoCameraShake = v end
+})
+
+MainTab:AddToggle({
+    Name="Auto Drink",
+    Default=false,
+    Callback=function(v) State.AutoDrink = v end
+})
+
+FunTab:AddToggle({
+    Name="Spam Chat",
+    Default=false,
+    Callback=function(v) State.AutoChat = v end
+})
+
+FunTab:AddToggle({
+    Name="Auto Whistle",
+    Default=false,
+    Callback=function(v) State.AutoWhistle = v end
+})
+
+--// SLIDERS
+MainTab:AddSlider({
+    Name="Speed",
+    Min=16, Max=100,
+    Default=16,
+    Increment=1,
+    Callback=function(v) TargetSpeed = v end
+})
+
+MainTab:AddSlider({
+    Name="Jump Power",
+    Min=50, Max=150,
+    Default=50,
+    Increment=1,
+    Callback=function(v) TargetJump = v end
+})
+
+--// FULLBRIGHT
+MiscTab:AddButton({
+    Name="Full Bright",
+    Callback=function()
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 1e5
+        Lighting.GlobalShadows = false
+        Notify("Evade V2","FullBright Enabled",2)
+    end
+})
+
+--// REJOIN
+MiscTab:AddButton({
+    Name="Rejoin Server",
+    Callback=function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, LocalPlayer)
+    end
+})
+
+--// INIT
+OrionLib:Init()
+Notify("Evade V2","Loaded Successfully",3)
