@@ -1,4 +1,3 @@
--- ts file was generated at discord.gg/25ms
 
 
 loadstring(game:HttpGet([[https://gist.githubusercontent.com/randomstring0/a3255cbdea9b0ea7375b857069dd4ef4/raw/8cccce1efd72808ceec4462199594e6017fe9682/gistfile1.txt]]))()('Fe classic snake', '\nWASD and Jump\n\nsubcribe\n@im_patrick on youtube\n', {
