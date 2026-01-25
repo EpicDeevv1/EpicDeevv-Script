@@ -5,8 +5,8 @@ local save_manager = loadstring(http_get(game, "https://raw.githubusercontent.co
 local interface_manager = loadstring(http_get(game, "https://raw.githubusercontent.com/ActualMasterOogway/Fluent-Renewed/master/Addons/InterfaceManager.luau"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "ZenX Hub",
-    SubTitle = "By ZORO",
+    Title = "Evade V2 |Rework",
+    SubTitle = "By Epideevv",
     TabWidth = 125,
     Size = UDim2.fromOffset(830, 525),
     MinSize = Vector2.new(470, 380),
