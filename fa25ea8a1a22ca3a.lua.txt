@@ -1,0 +1,477 @@
+-- ts file was generated at discord.gg/25ms
+
+local _HttpService = game:GetService('HttpService')
+local _Players = game:GetService('Players')
+local _StarterGui = game:GetService('StarterGui')
+local _TweenService = game:GetService('TweenService')
+local _LocalPlayer = _Players.LocalPlayer
+local u6 = 'adopt_91670'
+local u7 = ''
+local u8 = 'PremiumJIDRGPPO2F'
+local _UserId = _LocalPlayer.UserId
+local u10 = 'ParadoxKey.txt'
+
+local function v11()
+    if isfile(u10) then
+        return readfile(u10)
+    else
+        return nil
+    end
+end
+local function u13(p12)
+    writefile(u10, p12)
+end
+local function u19()
+    if u7 ~= u8 then
+        local u14 = 'https://pandadevelopment.net/v2_validation?key=' .. u7 .. '&service=' .. u6 .. '&hwid=' .. _UserId
+        local v16, u17 = pcall(function()
+            local v15 = {
+                Url = u14,
+                Method = 'GET',
+            }
+
+            return request(v15)
+        end)
+
+        if v16 then
+            local u18 = nil
+
+            pcall(function()
+                u18 = _HttpService:JSONDecode(u17.Body)
+            end)
+
+            if u18 and u18.V2_Authentication == 'success' then
+                _StarterGui:SetCore('SendNotification', {
+                    Title = 'Paradox Hub',
+                    Text = 'Authentication success!',
+                    Duration = 4,
+                })
+
+                return true
+            else
+                _StarterGui:SetCore('SendNotification', {
+                    Title = 'Paradox Hub',
+                    Text = 'Authentication failed!',
+                    Duration = 4,
+                })
+
+                return false
+            end
+        else
+            _StarterGui:SetCore('SendNotification', {
+                Title = 'Paradox Hub',
+                Text = 'Failed to contact server',
+                Duration = 4,
+            })
+
+            return false
+        end
+    else
+        _StarterGui:SetCore('SendNotification', {
+            Title = 'Paradox Hub',
+            Text = 'Premium key accepted!',
+            Duration = 4,
+        })
+
+        return true
+    end
+end
+local function u20()
+    return 'https://pandadevelopment.net/getkey?service=' .. u6 .. '&hwid=' .. _UserId
+end
+
+local _ScreenGui = Instance.new('ScreenGui')
+local v22 = v11()
+local u23
+
+if v22 then
+    u7 = v22
+
+    if u19() then
+        _ScreenGui:Destroy()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EncryptedV100/Paradox-Hub/refs/heads/main/mainloader.lua'))()
+
+        u23 = u7
+    else
+        u23 = u7
+    end
+else
+    u23 = u7
+end
+
+local _Frame = Instance.new('Frame')
+local _Frame2 = Instance.new('Frame')
+local _UICorner = Instance.new('UICorner')
+local _TextLabel = Instance.new('TextLabel')
+local _UIPadding = Instance.new('UIPadding')
+local _ImageLabel = Instance.new('ImageLabel')
+local _UICorner2 = Instance.new('UICorner')
+local _TextLabel2 = Instance.new('TextLabel')
+local _TextLabel3 = Instance.new('TextLabel')
+local _UIPadding2 = Instance.new('UIPadding')
+local _UIStroke = Instance.new('UIStroke')
+local _TextBox = Instance.new('TextBox')
+local _UIPadding3 = Instance.new('UIPadding')
+local _UICorner3 = Instance.new('UICorner')
+local _UIStroke2 = Instance.new('UIStroke')
+local _TextButton = Instance.new('TextButton')
+local _UICorner4 = Instance.new('UICorner')
+local _UIStroke3 = Instance.new('UIStroke')
+local _ImageLabel2 = Instance.new('ImageLabel')
+local _Frame3 = Instance.new('Frame')
+local _TextButton2 = Instance.new('TextButton')
+local _UICorner5 = Instance.new('UICorner')
+local _UIStroke4 = Instance.new('UIStroke')
+local _ImageLabel3 = Instance.new('ImageLabel')
+local _UIPadding4 = Instance.new('UIPadding')
+local _Frame4 = Instance.new('Frame')
+local _TextLabel4 = Instance.new('TextLabel')
+local _TextButton3 = Instance.new('TextButton')
+local _CoreGui = game:GetService('CoreGui')
+
+if _CoreGui:FindFirstChild('KeySystemGui') then
+    _CoreGui.KeySystemGui:Destroy()
+end
+
+_ScreenGui.Name = 'KeySystemGui'
+_ScreenGui.Parent = _CoreGui
+_ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_Frame.Name = 'MainFrame'
+_Frame.Parent = _ScreenGui
+_Frame.AnchorPoint = Vector2.new(0, 1)
+_Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_Frame.BackgroundTransparency = 0.45
+_Frame.BorderSizePixel = 0
+_Frame.Position = UDim2.new(0.351, 0, 0.782, 0)
+_Frame.Size = UDim2.new(0, 300, 0, 350)
+_Frame2.Name = 'TopBar'
+_Frame2.Parent = _Frame
+_Frame2.BackgroundTransparency = 1
+_Frame2.Size = UDim2.new(0, 300, 0, 45)
+_UICorner.Parent = _Frame2
+_TextLabel.Name = 'Title'
+_TextLabel.Parent = _Frame2
+_TextLabel.BackgroundTransparency = 1
+_TextLabel.Size = UDim2.new(0, 300, 0, 50)
+_TextLabel.Font = Enum.Font.Ubuntu
+_TextLabel.RichText = true
+_TextLabel.Text = '<b>Key System</b>'
+_TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+_TextLabel.TextSize = 14
+_TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+_UIPadding.Parent = _TextLabel
+_UIPadding.PaddingLeft = UDim.new(0, 20)
+_ImageLabel.Name = 'ParadoxIcon'
+_ImageLabel.Parent = _Frame2
+_ImageLabel.BackgroundTransparency = 1
+_ImageLabel.Position = UDim2.new(0.803, 0, 1.333, 0)
+_ImageLabel.Size = UDim2.new(0, 30, 0, 30)
+_ImageLabel.Image = 'rbxassetid://136571553058641'
+
+local _ImageButton = Instance.new('ImageButton')
+
+_ImageButton.Parent = _Frame
+_ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_ImageButton.BackgroundTransparency = 1
+_ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_ImageButton.BorderSizePixel = 0
+_ImageButton.Position = UDim2.new(0.910000166, 0, 0, 0)
+_ImageButton.Size = UDim2.new(0, 25, 0, 25)
+_ImageButton.Image = 'rbxassetid://86854350105928'
+_ImageButton.ImageColor3 = Color3.fromRGB(255, 0, 0)
+
+_ImageButton.MouseButton1Click:Connect(function()
+    _ScreenGui:Destroy()
+end)
+
+_UICorner2.Parent = _Frame
+_TextLabel2.Name = 'ParadoxHubLabel'
+_TextLabel2.Parent = _Frame
+_TextLabel2.BackgroundTransparency = 1
+_TextLabel2.Position = UDim2.new(0.167, 0, 0.143, 0)
+_TextLabel2.Size = UDim2.new(0, 200, 0, 50)
+_TextLabel2.Font = Enum.Font.Ubuntu
+_TextLabel2.RichText = true
+_TextLabel2.Text = '<b>Paradox Hub</b>'
+_TextLabel2.TextColor3 = Color3.fromRGB(221, 0, 0)
+_TextLabel2.TextSize = 28
+_TextLabel3.Name = 'KeyHereLabel'
+_TextLabel3.Parent = _Frame
+_TextLabel3.BackgroundTransparency = 1
+_TextLabel3.Position = UDim2.new(0, 0, 0.309, 0)
+_TextLabel3.Size = UDim2.new(0, 200, 0, 50)
+_TextLabel3.Font = Enum.Font.Ubuntu
+_TextLabel3.RichText = true
+_TextLabel3.Text = '<b>Key Here</b>'
+_TextLabel3.TextColor3 = Color3.fromRGB(255, 255, 255)
+_TextLabel3.TextSize = 12
+_TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
+_UIPadding2.Parent = _TextLabel3
+_UIPadding2.PaddingLeft = UDim.new(0, 6)
+_UIStroke.Color = Color3.fromRGB(255, 0, 0)
+_UIStroke.Thickness = 2
+_UIStroke.Transparency = 0.6
+_UIStroke.Parent = _Frame
+_TextBox.Name = 'KeyTextBox'
+_TextBox.Parent = _Frame
+_TextBox.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+_TextBox.BackgroundTransparency = 0.8
+_TextBox.Position = UDim2.new(0.033, 0, 0.451, 0)
+_TextBox.Size = UDim2.new(0, 280, 0, 50)
+_TextBox.Font = Enum.Font.Ubuntu
+_TextBox.RichText = true
+_TextBox.Text = '<b>Enter Key Here</b>'
+_TextBox.TextColor3 = Color3.fromRGB(129, 129, 129)
+_TextBox.TextSize = 11
+_TextBox.TextXAlignment = Enum.TextXAlignment.Left
+_UIPadding3.Parent = _TextBox
+_UIPadding3.PaddingLeft = UDim.new(0, 12)
+_UICorner3.CornerRadius = UDim.new(0, 4)
+_UICorner3.Parent = _TextBox
+_UIStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_UIStroke2.Color = Color3.fromRGB(255, 0, 0)
+_UIStroke2.Transparency = 0.6
+_UIStroke2.Parent = _TextBox
+
+local u54 = '<b>Enter Key Here</b>'
+local u55 = Color3.fromRGB(129, 129, 129)
+local u56 = Color3.fromRGB(255, 255, 255)
+
+_TextBox.Focused:Connect(function()
+    if _TextBox.Text == u54 then
+        _TextBox.Text = ''
+        _TextBox.TextColor3 = u56
+    end
+end)
+_TextBox.FocusLost:Connect(function()
+    if _TextBox.Text == '' then
+        _TextBox.Text = u54
+        _TextBox.TextColor3 = u55
+    end
+end)
+_TextBox.FocusLost:Connect(function()
+    if _TextBox.Text == '' then
+        _TextBox.Text = u54
+        _TextBox.TextColor3 = u55
+    end
+end)
+
+_TextButton.Name = 'SubmitKeyButton'
+_TextButton.Parent = _Frame
+_TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+_TextButton.Position = UDim2.new(0.033, 0, 0.623, 0)
+_TextButton.Size = UDim2.new(0, 280, 0, 50)
+_TextButton.Font = Enum.Font.Ubuntu
+_TextButton.RichText = true
+_TextButton.Text = '<b>Submit Key</b>'
+_TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+_TextButton.TextSize = 14
+_UICorner4.CornerRadius = UDim.new(0, 4)
+_UICorner4.Parent = _TextButton
+_UIStroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_UIStroke3.Color = Color3.fromRGB(255, 0, 0)
+_UIStroke3.Transparency = 0.6
+_UIStroke3.Parent = _TextButton
+
+local _Frame5 = Instance.new('Frame')
+
+_Frame5.Name = 'BlackBar'
+_Frame5.Parent = _TextButton
+_Frame5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_Frame5.BackgroundTransparency = 0.8
+_Frame5.BorderSizePixel = 0
+_Frame5.AnchorPoint = Vector2.new(0.5, 0.5)
+_Frame5.Position = UDim2.new(0.5, 0, 0.5, 0)
+_Frame5.Size = UDim2.new(0, 2, 1, 0)
+_Frame5.Visible = false
+
+local u58 = nil
+
+_TextButton.MouseButton1Click:Connect(function()
+    if u58 then
+        u58:Cancel()
+    end
+
+    _Frame5.Visible = true
+    _Frame5.Size = UDim2.new(0, 2, 1, 0)
+    _Frame5.Position = UDim2.new(0.5, 0, 0.5, 0)
+    u58 = _TweenService:Create(_Frame5, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+        Size = UDim2.new(1, 0, 1, 0),
+    })
+
+    u58:Play()
+    u58.Completed:Connect(function()
+        if u58.PlaybackState == Enum.PlaybackState.Completed then
+            _Frame5.Visible = false
+            u58 = nil
+            u23 = _TextBox.Text
+
+            if u23 ~= '' and (u23 ~= u54 and u19()) then
+                u13(u23)
+                _ScreenGui:Destroy()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/EncryptedV100/Paradox-Hub/refs/heads/main/mainloader.lua'))()
+            end
+        end
+    end)
+end)
+
+_ImageLabel2.Parent = _TextButton
+_ImageLabel2.BackgroundTransparency = 1
+_ImageLabel2.Position = UDim2.new(0.639, 0, 0.24, 0)
+_ImageLabel2.Size = UDim2.new(0, 25, 0, 25)
+_ImageLabel2.Image = 'rbxassetid://79095566920811'
+_Frame3.Name = 'SeparatingLine'
+_Frame3.Parent = _Frame
+_Frame3.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+_Frame3.Position = UDim2.new(0.033, 0, 0.797, 0)
+_Frame3.Size = UDim2.new(0, 280, 0, 1.5)
+_TextButton2.Name = 'CopyLinkButton'
+_TextButton2.Parent = _Frame
+_TextButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+_TextButton2.BackgroundTransparency = 0.5
+_TextButton2.Position = UDim2.new(0.267, 0, 0.823, 0)
+_TextButton2.Size = UDim2.new(0, 140, 0, 30)
+_TextButton2.Font = Enum.Font.Ubuntu
+_TextButton2.RichText = true
+_TextButton2.Text = '<b>Copy Key Link</b>'
+_TextButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
+_TextButton2.TextSize = 12
+_TextButton2.TextWrapped = true
+_UICorner5.Parent = _TextButton2
+_UIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_UIStroke4.Transparency = 0.8
+_UIStroke4.Parent = _TextButton2
+
+local _Frame6 = Instance.new('Frame')
+
+_Frame6.Name = 'BlackBarCopy'
+_Frame6.Parent = _TextButton2
+_Frame6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_Frame6.BackgroundTransparency = 0.8
+_Frame6.BorderSizePixel = 0
+_Frame6.AnchorPoint = Vector2.new(0.5, 0.5)
+_Frame6.Position = UDim2.new(0.5, 0, 0.5, 0)
+_Frame6.Size = UDim2.new(0, 2, 1, 0)
+_Frame6.Visible = false
+
+local u60 = nil
+
+_TextButton2.MouseButton1Click:Connect(function()
+    if u60 then
+        u60:Cancel()
+    end
+
+    _Frame6.Visible = true
+    _Frame6.Size = UDim2.new(0, 2, 1, 0)
+    _Frame6.Position = UDim2.new(0.5, 0, 0.5, 0)
+    u60 = _TweenService:Create(_Frame6, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+        Size = UDim2.new(1, 0, 1, 0),
+    })
+
+    u60:Play()
+    u60.Completed:Connect(function()
+        if u60.PlaybackState == Enum.PlaybackState.Completed then
+            _Frame6.Visible = false
+            u60 = nil
+
+            setclipboard(u20())
+            _StarterGui:SetCore('SendNotification', {
+                Title = 'Nova Hub',
+                Text = 'Key link copied!',
+                Duration = 4,
+            })
+        end
+    end)
+end)
+
+_ImageLabel3.Parent = _TextButton2
+_ImageLabel3.BackgroundTransparency = 1
+_ImageLabel3.Position = UDim2.new(0.826, 0, 0, 0)
+_ImageLabel3.Size = UDim2.new(0, 30, 0, 30)
+_ImageLabel3.Image = 'rbxassetid://119799298055726'
+_UIPadding4.Parent = _TextButton2
+_UIPadding4.PaddingRight = UDim.new(0, 8)
+_Frame4.Name = 'SeparatingLine2'
+_Frame4.Parent = _Frame
+_Frame4.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+_Frame4.Position = UDim2.new(0.033, 0, 0.925, 0)
+_Frame4.Size = UDim2.new(0, 280, 0, 1.5)
+_TextLabel4.Name = 'JoinDiscordLabel'
+_TextLabel4.Parent = _Frame
+_TextLabel4.BackgroundTransparency = 1
+_TextLabel4.Position = UDim2.new(0.126, 0, 0.94, 0)
+_TextLabel4.Size = UDim2.new(0, 225, 0, 15)
+_TextLabel4.Font = Enum.Font.Ubuntu
+_TextLabel4.RichText = true
+_TextLabel4.Text = '<b>Join The                 To Buy Permanent Key</b>'
+_TextLabel4.TextColor3 = Color3.fromRGB(255, 255, 255)
+_TextLabel4.TextSize = 12
+_TextButton3.Name = 'DiscordButton'
+_TextButton3.Parent = _TextLabel4
+_TextButton3.Active = false
+_TextButton3.BackgroundTransparency = 1
+_TextButton3.Position = UDim2.new(0.298, 0, 0, 0)
+_TextButton3.Selectable = false
+_TextButton3.Size = UDim2.new(0, 50, 0, 15)
+_TextButton3.Font = Enum.Font.Ubuntu
+_TextButton3.RichText = true
+_TextButton3.Text = '<b>Discord</b>'
+_TextButton3.TextColor3 = Color3.fromRGB(0, 4, 255)
+_TextButton3.TextSize = 12
+
+local _UIPadding5 = Instance.new('UIPadding')
+
+_UIPadding5.Parent = _TextButton3
+_UIPadding5.PaddingRight = UDim.new(0, 40)
+
+_TextButton3.MouseButton1Click:Connect(function()
+    setclipboard('https://discord.gg/45KAmZVVk2')
+end)
+game:GetService('UserInputService')
+
+local _RunService = game:GetService('RunService')
+local u63 = nil
+local u64 = nil
+local u65 = nil
+local u66 = nil
+local u67 = nil
+local u68 = 6
+
+local function u72(p69, p70, p71)
+    return p69 + (p70 - p69) * p71
+end
+local function v75(p73)
+    if u65 then
+        if u63 or not u67 then
+            local v74 = u66.Position - u64
+
+            u67 = UDim2.new(u65.X.Scale, u65.X.Offset + v74.X, u65.Y.Scale, u65.Y.Offset + v74.Y)
+            _Frame.Position = UDim2.new(u65.X.Scale, u72(_Frame.Position.X.Offset, u67.X.Offset, p73 * u68), u65.Y.Scale, u72(_Frame.Position.Y.Offset, u67.Y.Offset, p73 * u68))
+        else
+            _Frame.Position = UDim2.new(u65.X.Scale, u72(_Frame.Position.X.Offset, u67.X.Offset, p73 * u68), u65.Y.Scale, u72(_Frame.Position.Y.Offset, u67.Y.Offset, p73 * u68))
+        end
+    else
+        return
+    end
+end
+
+_Frame.InputBegan:Connect(function(p76)
+    if p76.UserInputType == Enum.UserInputType.MouseButton1 or p76.UserInputType == Enum.UserInputType.Touch then
+        u63 = true
+        u64 = p76.Position
+        u65 = _Frame.Position
+        u66 = p76
+
+        p76.Changed:Connect(function()
+            if p76.UserInputState == Enum.UserInputState.End then
+                u63 = false
+            end
+        end)
+    end
+end)
+_Frame.InputChanged:Connect(function(p77)
+    if p77.UserInputType == Enum.UserInputType.MouseMovement or p77.UserInputType == Enum.UserInputType.Touch then
+        u66 = p77
+    end
+end)
+_RunService.Heartbeat:Connect(v75)
