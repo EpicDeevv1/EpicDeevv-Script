@@ -1,0 +1,3462 @@
+-- ts file was generated at discord.gg/25ms
+
+local genv = getgenv()
+local fenv = getfenv()
+local _5 = loadstring(game:HttpGet('https://jnkie.com/sdk/library.lua'))()
+
+_5.service = 'killing V2 Rework'
+_5.identifier = '1003239'
+genv.SCRIPT_KEY = nil
+genv.UI_CLOSED = false
+
+local _call9 = game:GetService('TweenService')
+local _call11 = game:GetService('UserInputService')
+
+game:GetService('Lighting')
+Color3.fromRGB(15, 10, 25)
+
+local _call17 = Color3.fromRGB(25, 15, 40)
+local _call19 = Color3.fromRGB(35, 25, 55)
+local _call21 = Color3.fromRGB(138, 43, 226)
+
+Color3.fromRGB(100, 30, 180)
+
+local _call25 = Color3.fromRGB(168, 85, 247)
+local _call29 = Color3.fromRGB(138, 43, 226)
+local _call37 = Color3.fromRGB(245, 240, 255)
+local _call39 = Color3.fromRGB(200, 180, 220)
+local _call43 = Color3.fromRGB(80, 50, 120)
+
+Color3.fromRGB(100, 70, 150)
+Color3.fromRGB(200, 180, 255)
+
+local _ = fenv.options
+local _ = game:GetService('Players').LocalPlayer
+
+game:GetService('RbxAnalyticsService'):GetClientId()
+
+local _call59 = Instance.new('ScreenGui')
+
+_call59.Name = 'JunkieKeySystemUI'
+_call59.ResetOnSpawn = false
+_call59.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_call59.IgnoreGuiInset = true
+
+local _call63 = Instance.new('Frame')
+
+_call63.Name = 'Backdrop'
+_call63.Size = UDim2.new(1, 0, 1, 0)
+_call63.Position = UDim2.new(0, 0, 0, 0)
+_call63.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_call63.BackgroundTransparency = 0.3
+_call63.BorderSizePixel = 0
+_call63.Parent = _call59
+
+local _call71 = Instance.new('Frame')
+
+_call71.Name = 'Container'
+
+local _ = _call11.TouchEnabled
+local _ = _call11.KeyboardEnabled
+local _ = workspace.CurrentCamera.ViewportSize
+
+_call71.Size = UDim2.new(0, 580, 0, 320)
+_call71.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call71.AnchorPoint = Vector2.new(0.5, 0.5)
+_call71.BackgroundColor3 = _call17
+_call71.BorderSizePixel = 0
+_call71.BackgroundTransparency = 0
+_call71.Parent = _call63
+
+_call71:SetAttribute('IsMobile', false)
+
+local _call85 = Instance.new('UICorner')
+
+_call85.CornerRadius = UDim.new(0, 14)
+_call85.Parent = _call71
+
+local _call89 = Instance.new('UIStroke')
+
+_call89.Color = _call21
+_call89.Thickness = 2
+_call89.Transparency = 0
+_call89.Parent = _call71
+
+local _call91 = Instance.new('Frame')
+
+_call91.Name = 'Shadow'
+_call91.Size = UDim2.new(1, 20, 1, 20)
+_call91.Position = UDim2.new(0.5, 0, 0.5, 4)
+_call91.AnchorPoint = Vector2.new(0.5, 0.5)
+_call91.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_call91.BackgroundTransparency = 0.7
+_call91.BorderSizePixel = 0
+_call91.ZIndex = 0
+_call91.Parent = _call63
+
+local _call101 = Instance.new('UICorner')
+
+_call101.CornerRadius = UDim.new(0, 16)
+_call101.Parent = _call91
+
+local _call105 = Instance.new('Frame')
+
+_call105.Name = 'GlowEffect'
+_call105.Size = UDim2.new(1, 0, 1, 0)
+_call105.Position = UDim2.new(0, 0, 0, 0)
+_call105.BackgroundColor3 = _call21
+_call105.BackgroundTransparency = 0.7
+_call105.BorderSizePixel = 0
+_call105.ZIndex = 1
+_call105.ClipsDescendants = true
+_call105.Parent = _call71
+
+local _call111 = Instance.new('UICorner')
+
+_call111.CornerRadius = UDim.new(0, 14)
+_call111.Parent = _call105
+
+local _call115 = Instance.new('Frame')
+
+_call115.Name = 'InnerGlow'
+_call115.Size = UDim2.new(1, 40, 1, 40)
+_call115.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call115.AnchorPoint = Vector2.new(0.5, 0.5)
+_call115.BackgroundColor3 = _call25
+_call115.BackgroundTransparency = 0.75
+_call115.BorderSizePixel = 0
+_call115.Parent = _call105
+
+local _call123 = Instance.new('UICorner')
+
+_call123.CornerRadius = UDim.new(0, 30)
+_call123.Parent = _call115
+
+local _call135 = _call9:Create(_call115, TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {
+    BackgroundTransparency = 0.5,
+    Size = UDim2.new(1, 60, 1, 60),
+})
+
+_call135:Play()
+
+local _call139 = Instance.new('Frame')
+
+_call139.Name = 'GlassOverlay'
+_call139.Size = UDim2.new(1, 0, 1, 0)
+_call139.Position = UDim2.new(0, 0, 0, 0)
+_call139.BackgroundColor3 = Color3.fromRGB(255, 100, 120)
+_call139.BackgroundTransparency = 0.92
+_call139.BorderSizePixel = 0
+_call139.ZIndex = 1
+_call139.Parent = _call71
+
+local _call147 = Instance.new('UICorner')
+
+_call147.CornerRadius = UDim.new(0, 14)
+_call147.Parent = _call139
+
+local _call151 = Instance.new('UIGradient')
+local _call165 = ColorSequence.new({
+    [1] = ColorSequenceKeypoint.new(0, Color3.fromRGB(180, 120, 255)),
+    [2] = ColorSequenceKeypoint.new(0.5, Color3.fromRGB(150, 100, 220)),
+    [3] = ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 80, 200)),
+})
+
+_call151.Color = _call165
+_call151.Rotation = 45
+
+local _call173 = NumberSequence.new({
+    [1] = NumberSequenceKeypoint.new(0, 0.88),
+    [2] = NumberSequenceKeypoint.new(0.5, 0.92),
+    [3] = NumberSequenceKeypoint.new(1, 0.95),
+})
+
+_call151.Transparency = _call173
+_call151.Parent = _call139
+
+local _call175 = Instance.new('Frame')
+
+_call175.Name = 'TopBar'
+_call175.Size = UDim2.new(1, 0, 0, 45)
+_call175.Position = UDim2.new(0, 0, 0, 0)
+_call175.BackgroundColor3 = _call17
+_call175.BorderSizePixel = 0
+_call175.ZIndex = 10
+_call175.Parent = _call71
+
+local _call181 = Instance.new('UICorner')
+
+_call181.CornerRadius = UDim.new(0, 14)
+_call181.Parent = _call175
+
+local _call185 = Instance.new('Frame')
+
+_call185.Name = 'BrandLogo'
+_call185.Size = UDim2.new(0, 200, 1, 0)
+_call185.Position = UDim2.new(0, 20, 0, 0)
+_call185.BackgroundTransparency = 1
+_call185.ZIndex = 11
+_call185.Parent = _call175
+
+local _call191 = Instance.new('ImageLabel')
+
+_call191.BackgroundTransparency = 1
+_call191.Size = UDim2.new(0, 24, 0, 24)
+_call191.Image = 'rbxassetid://135162309920115'
+_call191.ImageColor3 = _call21
+_call191.ScaleType = Enum.ScaleType.Fit
+
+local _call197 = Instance.new('UICorner')
+
+_call197.CornerRadius = UDim.new(1, 0)
+_call197.Parent = _call191
+
+_call191:IsA('ImageLabel')
+
+local _ = _call191.ResampleMode
+
+_call191.ResampleMode = Enum.ResamplerMode.Default
+_call191.AnchorPoint = Vector2.new(0, 0.5)
+_call191.Position = UDim2.new(0, 0, 0.5, 0)
+_call191.ZIndex = 11
+_call191.Parent = _call185
+
+local _call210 = Instance.new('TextLabel')
+
+_call210.BackgroundTransparency = 1
+_call210.Size = UDim2.new(1, -30, 1, 0)
+_call210.Position = UDim2.new(0, 28, 0, 0)
+_call210.Text = 'Luna Hub | Key System'
+_call210.TextColor3 = _call37
+_call210.TextSize = 15
+_call210.TextXAlignment = Enum.TextXAlignment.Left
+_call210.Font = Enum.Font.GothamSemibold
+_call210.ZIndex = 11
+_call210.Parent = _call185
+
+local _call220 = Instance.new('TextButton')
+
+_call220.Name = 'CloseButton'
+_call220.Size = UDim2.new(0, 30, 0, 30)
+_call220.Position = UDim2.new(1, -40, 0.5, 0)
+_call220.AnchorPoint = Vector2.new(0, 0.5)
+_call220.BackgroundColor3 = Color3.fromRGB(239, 68, 68)
+_call220.BackgroundTransparency = 0.8
+_call220.BorderSizePixel = 0
+_call220.Text = ''
+_call220.AutoButtonColor = false
+_call220.ZIndex = 11
+_call220.Parent = _call175
+
+local _call228 = Instance.new('UICorner')
+
+_call228.CornerRadius = UDim.new(0, 8)
+_call228.Parent = _call220
+
+local _call232 = Instance.new('ImageLabel')
+
+_call232.BackgroundTransparency = 1
+_call232.Size = UDim2.new(0, 16, 0, 16)
+_call232.Image = 'rbxassetid://73070135088117'
+_call232.ImageColor3 = _call37
+_call232.ScaleType = Enum.ScaleType.Fit
+
+local _call238 = Instance.new('UICorner')
+
+_call238.CornerRadius = UDim.new(1, 0)
+_call238.Parent = _call232
+
+_call232:IsA('ImageLabel')
+
+local _ = _call232.ResampleMode
+
+_call232.ResampleMode = Enum.ResamplerMode.Default
+_call232.AnchorPoint = Vector2.new(0.5, 0.5)
+_call232.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call232.ZIndex = 12
+_call232.Parent = _call220
+
+local _call251 = Instance.new('Frame')
+
+_call251.Name = 'ContentArea'
+_call251.Size = UDim2.new(1, -40, 1, -65)
+_call251.Position = UDim2.new(0, 20, 0, 55)
+_call251.BackgroundTransparency = 1
+_call251.Parent = _call71
+
+local _call257 = Instance.new('Frame')
+
+_call257.Name = 'TitleSection'
+_call257.Size = UDim2.new(1, 0, 0, 85)
+_call257.Position = UDim2.new(0, 0, 0, 5)
+_call257.BackgroundTransparency = 1
+_call257.Parent = _call251
+
+local _call263 = Instance.new('Frame')
+
+_call263.Name = 'IconFrame'
+_call263.Size = UDim2.new(0, 56, 0, 56)
+_call263.Position = UDim2.new(0.5, -28, 0, 0)
+_call263.BackgroundColor3 = _call19
+_call263.BorderSizePixel = 0
+_call263.Parent = _call257
+
+local _call269 = Instance.new('UICorner')
+
+_call269.CornerRadius = UDim.new(1, 0)
+_call269.Parent = _call263
+
+local _call273 = Instance.new('UIGradient')
+local _call281 = ColorSequence.new({
+    [1] = ColorSequenceKeypoint.new(0, _call21),
+    [2] = ColorSequenceKeypoint.new(0.5, _call25),
+    [3] = ColorSequenceKeypoint.new(1, Color3.fromRGB(147, 51, 234)),
+})
+
+_call273.Color = _call281
+_call273.Rotation = 45
+_call273.Parent = _call263
+
+local _call283 = Instance.new('UIStroke')
+
+_call283.Color = _call21
+_call283.Thickness = 2
+_call283.Transparency = 0.5
+_call283.Parent = _call263
+
+local _call285 = Instance.new('UIGradient')
+local _call293 = ColorSequence.new({
+    [1] = ColorSequenceKeypoint.new(0, Color3.fromRGB(138, 43, 226)),
+    [2] = ColorSequenceKeypoint.new(0.5, _call21),
+    [3] = ColorSequenceKeypoint.new(1, Color3.fromRGB(168, 85, 247)),
+})
+
+_call285.Color = _call293
+_call285.Rotation = 0
+_call285.Parent = _call283
+
+local _call301 = _call9:Create(_call285, TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360})
+
+_call301:Play()
+
+local _call307 = Instance.new('ImageLabel')
+
+_call307.BackgroundTransparency = 1
+_call307.Size = UDim2.new(0, 50, 0, 50)
+_call307.Image = 'rbxassetid://135162309920115'
+_call307.ImageColor3 = Color3.fromRGB(255, 255, 255)
+_call307.ScaleType = Enum.ScaleType.Fit
+
+local _call313 = Instance.new('UICorner')
+
+_call313.CornerRadius = UDim.new(1, 0)
+_call313.Parent = _call307
+
+_call307:IsA('ImageLabel')
+
+local _ = _call307.ResampleMode
+
+_call307.ResampleMode = Enum.ResamplerMode.Default
+_call307.AnchorPoint = Vector2.new(0.5, 0.5)
+_call307.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call307.Parent = _call263
+
+local _call326 = Instance.new('TextLabel')
+
+_call326.Name = 'TitleText'
+_call326.Size = UDim2.new(1, 0, 0, 24)
+_call326.Position = UDim2.new(0, 0, 0, 58)
+_call326.BackgroundTransparency = 1
+_call326.Text = 'Key Verification System'
+_call326.TextColor3 = _call37
+_call326.TextSize = 17
+_call326.TextXAlignment = Enum.TextXAlignment.Center
+_call326.Font = Enum.Font.GothamBold
+_call326.Parent = _call257
+
+local _call336 = Instance.new('TextLabel')
+
+_call336.Name = 'SubtitleText'
+_call336.Size = UDim2.new(1, 0, 0, 18)
+_call336.Position = UDim2.new(0, 0, 0, 82)
+_call336.BackgroundTransparency = 1
+_call336.Text = ''
+_call336.TextColor3 = _call39
+_call336.TextSize = 13
+_call336.TextXAlignment = Enum.TextXAlignment.Center
+_call336.Font = Enum.Font.Gotham
+_call336.Visible = false
+_call336.Parent = _call257
+
+local _call346 = Instance.new('Frame')
+
+_call346.Name = 'InputSection'
+_call346.Size = UDim2.new(1, 0, 0, 46)
+_call346.Position = UDim2.new(0, 0, 0, 115)
+_call346.BackgroundColor3 = _call19
+_call346.BorderSizePixel = 0
+_call346.Parent = _call251
+
+local _call352 = Instance.new('UICorner')
+
+_call352.CornerRadius = UDim.new(0, 10)
+_call352.Parent = _call346
+
+local _call356 = Instance.new('UIStroke')
+
+_call356.Color = _call43
+_call356.Thickness = 1
+_call356.Transparency = 0.5
+_call356.Parent = _call346
+
+local _call358 = Instance.new('ImageLabel')
+
+_call358.BackgroundTransparency = 1
+_call358.Size = UDim2.new(0, 18, 0, 18)
+_call358.Image = 'rbxassetid://128426502701541'
+_call358.ImageColor3 = _call21
+_call358.ScaleType = Enum.ScaleType.Fit
+
+local _call364 = Instance.new('UICorner')
+
+_call364.CornerRadius = UDim.new(1, 0)
+_call364.Parent = _call358
+
+_call358:IsA('ImageLabel')
+
+local _ = _call358.ResampleMode
+
+_call358.ResampleMode = Enum.ResamplerMode.Default
+_call358.AnchorPoint = Vector2.new(0, 0.5)
+_call358.Position = UDim2.new(0, 14, 0.5, 0)
+_call358.Parent = _call346
+
+local _call377 = Instance.new('TextBox')
+
+_call377.Name = 'KeyInput'
+_call377.Size = UDim2.new(1, -50, 1, 0)
+_call377.Position = UDim2.new(0, 40, 0, 0)
+_call377.BackgroundTransparency = 1
+_call377.PlaceholderText = 'Enter your verification key'
+_call377.PlaceholderColor3 = Color3.fromRGB(160, 140, 180)
+_call377.Text = ''
+_call377.TextColor3 = _call37
+_call377.TextSize = 14
+_call377.TextXAlignment = Enum.TextXAlignment.Left
+_call377.TextTruncate = Enum.TextTruncate.AtEnd
+_call377.Font = Enum.Font.Gotham
+_call377.ClearTextOnFocus = false
+_call377.Parent = _call346
+
+local _call389 = Instance.new('Frame')
+
+_call389.Name = 'ButtonSection'
+_call389.Size = UDim2.new(1, 0, 0, 40)
+_call389.Position = UDim2.new(0, 0, 0, 175)
+_call389.BackgroundTransparency = 1
+_call389.Parent = _call251
+
+local _call395 = Instance.new('TextButton')
+
+_call395.Name = 'VerifyButton'
+_call395.Size = UDim2.new(1, 0, 1, 0)
+_call395.Position = UDim2.new(0, 0, 0, 0)
+_call395.BackgroundColor3 = _call29
+_call395.BorderSizePixel = 0
+_call395.Text = ''
+_call395.TextSize = 14
+_call395.Font = Enum.Font.GothamSemibold
+_call395.AutoButtonColor = false
+_call395.Parent = _call389
+
+local _call403 = Instance.new('UICorner')
+
+_call403.CornerRadius = UDim.new(0, 10)
+_call403.Parent = _call395
+
+local _call407 = Instance.new('UIGradient')
+local _call413 = ColorSequence.new({
+    [1] = ColorSequenceKeypoint.new(0, _call29),
+    [2] = ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 30, 180)),
+})
+
+_call407.Color = _call413
+_call407.Rotation = 90
+_call407.Parent = _call395
+
+local _call415 = Instance.new('UIStroke')
+
+_call415.Color = Color3.fromRGB(168, 85, 247)
+_call415.Thickness = 0
+_call415.Transparency = 0.8
+_call415.Parent = _call395
+
+local _call419 = Instance.new('ImageLabel')
+
+_call419.BackgroundTransparency = 1
+_call419.Size = UDim2.new(0, 16, 0, 16)
+_call419.Image = 'rbxassetid://83827110621355'
+_call419.ImageColor3 = Color3.fromRGB(255, 255, 255)
+_call419.ScaleType = Enum.ScaleType.Fit
+
+local _call425 = Instance.new('UICorner')
+
+_call425.CornerRadius = UDim.new(1, 0)
+_call425.Parent = _call419
+
+_call419:IsA('ImageLabel')
+
+local _ = _call419.ResampleMode
+
+_call419.ResampleMode = Enum.ResamplerMode.Default
+_call419.AnchorPoint = Vector2.new(0, 0.5)
+_call419.Position = UDim2.new(0, 12, 0.5, 0)
+_call419.Parent = _call395
+
+local _call438 = Instance.new('TextLabel')
+
+_call438.Name = 'ButtonText'
+_call438.Size = UDim2.new(1, 0, 1, 0)
+_call438.Position = UDim2.new(0, 0, 0, 0)
+_call438.BackgroundTransparency = 1
+_call438.Text = 'Verify Key'
+_call438.TextColor3 = Color3.fromRGB(255, 255, 255)
+_call438.Font = Enum.Font.GothamSemibold
+_call438.TextSize = 14
+_call438.TextXAlignment = Enum.TextXAlignment.Center
+_call438.Parent = _call395
+
+local _call450 = Instance.new('Frame')
+
+_call450.Name = 'StatusBar'
+_call450.Size = UDim2.new(1, -40, 0, 2)
+_call450.Position = UDim2.new(0.5, 0, 1, -14)
+_call450.AnchorPoint = Vector2.new(0.5, 0)
+_call450.BackgroundColor3 = _call43
+_call450.BorderSizePixel = 0
+_call450.Parent = _call71
+
+local _call458 = Instance.new('TextLabel')
+
+_call458.Name = 'StatusText'
+_call458.BackgroundTransparency = 1
+_call458.Text = ''
+_call458.TextColor3 = _call39
+_call458.Font = Enum.Font.Gotham
+_call458.TextSize = 12
+_call458.TextXAlignment = Enum.TextXAlignment.Center
+_call458.Size = UDim2.new(1, -40, 0, 20)
+_call458.Position = UDim2.new(0.5, 0, 1, -38)
+_call458.AnchorPoint = Vector2.new(0.5, 0)
+_call458.Visible = false
+_call458.Parent = _call71
+
+task.spawn(function(_471, _471_2)
+    local _ = _call71.Parent
+    local _call474 = Instance.new('Frame')
+
+    _call474.Name = 'AmbientParticle'
+    _call474.Size = UDim2.new(0, 4, 0, 8)
+    _call474.Position = UDim2.new(0.9408281016184582, 0, 1, 0)
+    _call474.BackgroundColor3 = Color3.fromRGB(180, 123, 255)
+    _call474.BackgroundTransparency = 0.3
+    _call474.BorderSizePixel = 0
+    _call474.ZIndex = 2
+    _call474.Parent = _call71
+
+    local _call482 = Instance.new('UICorner')
+
+    _call482.CornerRadius = UDim.new(1, 0)
+    _call482.Parent = _call474
+
+    local _call486 = Instance.new('UIStroke')
+
+    _call486.Color = Color3.fromRGB(255, 100, 50)
+    _call486.Thickness = 1
+    _call486.Transparency = 0.5
+    _call486.Parent = _call474
+
+    local _call504 = _call9:Create(_call474, TweenInfo.new(7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call474.Position.X.Scale + 0.034), 0, -0.1, 0),
+    })
+
+    _call504:Play()
+
+    local _call510 = _call9:Create(_call486, TweenInfo.new(7), {Transparency = 1})
+
+    _call510:Play()
+    _call504.Completed:Connect(function(_516, _516_2, _516_3)
+        _call474:Destroy()
+    end)
+    task.wait(0.108)
+
+    local _ = _call71.Parent
+    local _call521 = Instance.new('Frame')
+
+    _call521.Name = 'AmbientParticle'
+    _call521.Size = UDim2.new(0, 5, 0, 6)
+    _call521.Position = UDim2.new(0.2400084305673896, 0, 1, 0)
+    _call521.BackgroundColor3 = Color3.fromRGB(180, 61, 255)
+    _call521.BackgroundTransparency = 0.3
+    _call521.BorderSizePixel = 0
+    _call521.ZIndex = 2
+    _call521.Parent = _call71
+
+    local _call529 = Instance.new('UICorner')
+
+    _call529.CornerRadius = UDim.new(1, 0)
+    _call529.Parent = _call521
+
+    local _call533 = Instance.new('UIStroke')
+
+    _call533.Color = Color3.fromRGB(255, 100, 50)
+    _call533.Thickness = 1
+    _call533.Transparency = 0.5
+    _call533.Parent = _call521
+
+    local _call551 = _call9:Create(_call521, TweenInfo.new(5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 1),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call521.Position.X.Scale + -0.03), 0, -0.1, 0),
+    })
+
+    _call551:Play()
+
+    local _call557 = _call9:Create(_call533, TweenInfo.new(5), {Transparency = 1})
+
+    _call557:Play()
+    _call551.Completed:Connect(function(_563, _563_2, _563_3)
+        _call521:Destroy()
+    end)
+    task.wait(0.239)
+
+    local _ = _call71.Parent
+    local _call568 = Instance.new('Frame')
+
+    _call568.Name = 'AmbientParticle'
+    _call568.Size = UDim2.new(0, 7, 0, 8)
+    _call568.Position = UDim2.new(0.23061647019668421, 0, 1, 0)
+    _call568.BackgroundColor3 = Color3.fromRGB(180, 93, 255)
+    _call568.BackgroundTransparency = 0.3
+    _call568.BorderSizePixel = 0
+    _call568.ZIndex = 2
+    _call568.Parent = _call71
+
+    local _call576 = Instance.new('UICorner')
+
+    _call576.CornerRadius = UDim.new(1, 0)
+    _call576.Parent = _call568
+
+    local _call580 = Instance.new('UIStroke')
+
+    _call580.Color = Color3.fromRGB(255, 100, 50)
+    _call580.Thickness = 1
+    _call580.Transparency = 0.5
+    _call580.Parent = _call568
+
+    local _call598 = _call9:Create(_call568, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 3, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call568.Position.X.Scale + 0), 0, -0.1, 0),
+    })
+
+    _call598:Play()
+
+    local _call604 = _call9:Create(_call580, TweenInfo.new(6), {Transparency = 1})
+
+    _call604:Play()
+    _call598.Completed:Connect(function(_610, _610_2, _610_3)
+        _call568:Destroy()
+    end)
+    task.wait(0.291)
+
+    local _ = _call71.Parent
+    local _call615 = Instance.new('Frame')
+
+    _call615.Name = 'AmbientParticle'
+    _call615.Size = UDim2.new(0, 4, 0, 3)
+    _call615.Position = UDim2.new(0.15896670282242306, 0, 1, 0)
+    _call615.BackgroundColor3 = Color3.fromRGB(180, 140, 255)
+    _call615.BackgroundTransparency = 0.3
+    _call615.BorderSizePixel = 0
+    _call615.ZIndex = 2
+    _call615.Parent = _call71
+
+    local _call623 = Instance.new('UICorner')
+
+    _call623.CornerRadius = UDim.new(1, 0)
+    _call623.Parent = _call615
+
+    local _call627 = Instance.new('UIStroke')
+
+    _call627.Color = Color3.fromRGB(255, 100, 50)
+    _call627.Thickness = 1
+    _call627.Transparency = 0.5
+    _call627.Parent = _call615
+
+    local _call645 = _call9:Create(_call615, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call615.Position.X.Scale + 0.004), 0, -0.1, 0),
+    })
+
+    _call645:Play()
+
+    local _call651 = _call9:Create(_call627, TweenInfo.new(6), {Transparency = 1})
+
+    _call651:Play()
+    _call645.Completed:Connect(function(_657, _657_2, _657_3)
+        _call615:Destroy()
+    end)
+    task.wait(0.211)
+
+    local _ = _call71.Parent
+    local _call662 = Instance.new('Frame')
+
+    _call662.Name = 'AmbientParticle'
+    _call662.Size = UDim2.new(0, 8, 0, 6)
+    _call662.Position = UDim2.new(0.9810746429339199, 0, 1, 0)
+    _call662.BackgroundColor3 = Color3.fromRGB(180, 109, 255)
+    _call662.BackgroundTransparency = 0.3
+    _call662.BorderSizePixel = 0
+    _call662.ZIndex = 2
+    _call662.Parent = _call71
+
+    local _call670 = Instance.new('UICorner')
+
+    _call670.CornerRadius = UDim.new(1, 0)
+    _call670.Parent = _call662
+
+    local _call674 = Instance.new('UIStroke')
+
+    _call674.Color = Color3.fromRGB(255, 100, 50)
+    _call674.Thickness = 1
+    _call674.Transparency = 0.5
+    _call674.Parent = _call662
+
+    local _call692 = _call9:Create(_call662, TweenInfo.new(7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 2),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call662.Position.X.Scale + -0.016), 0, -0.1, 0),
+    })
+
+    _call692:Play()
+
+    local _call698 = _call9:Create(_call674, TweenInfo.new(7), {Transparency = 1})
+
+    _call698:Play()
+    _call692.Completed:Connect(function(_704, _704_2, _704_3)
+        _call662:Destroy()
+    end)
+    task.wait(0.117)
+
+    local _ = _call71.Parent
+    local _call709 = Instance.new('Frame')
+
+    _call709.Name = 'AmbientParticle'
+    _call709.Size = UDim2.new(0, 7, 0, 5)
+    _call709.Position = UDim2.new(0.24724920031166117, 0, 1, 0)
+    _call709.BackgroundColor3 = Color3.fromRGB(180, 120, 255)
+    _call709.BackgroundTransparency = 0.3
+    _call709.BorderSizePixel = 0
+    _call709.ZIndex = 2
+    _call709.Parent = _call71
+
+    local _call717 = Instance.new('UICorner')
+
+    _call717.CornerRadius = UDim.new(1, 0)
+    _call717.Parent = _call709
+
+    local _call721 = Instance.new('UIStroke')
+
+    _call721.Color = Color3.fromRGB(255, 100, 50)
+    _call721.Thickness = 1
+    _call721.Transparency = 0.5
+    _call721.Parent = _call709
+
+    local _call739 = _call9:Create(_call709, TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 3, 0, 2),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call709.Position.X.Scale + 0.022), 0, -0.1, 0),
+    })
+
+    _call739:Play()
+
+    local _call745 = _call9:Create(_call721, TweenInfo.new(4), {Transparency = 1})
+
+    _call745:Play()
+    _call739.Completed:Connect(function(_751, _751_2, _751_3)
+        _call709:Destroy()
+    end)
+    task.wait(0.216)
+
+    local _ = _call71.Parent
+    local _call756 = Instance.new('Frame')
+
+    _call756.Name = 'AmbientParticle'
+    _call756.Size = UDim2.new(0, 5, 0, 5)
+    _call756.Position = UDim2.new(0.2529931116660533, 0, 1, 0)
+    _call756.BackgroundColor3 = Color3.fromRGB(180, 55, 255)
+    _call756.BackgroundTransparency = 0.3
+    _call756.BorderSizePixel = 0
+    _call756.ZIndex = 2
+    _call756.Parent = _call71
+
+    local _call764 = Instance.new('UICorner')
+
+    _call764.CornerRadius = UDim.new(1, 0)
+    _call764.Parent = _call756
+
+    local _call768 = Instance.new('UIStroke')
+
+    _call768.Color = Color3.fromRGB(255, 100, 50)
+    _call768.Thickness = 1
+    _call768.Transparency = 0.5
+    _call768.Parent = _call756
+
+    local _call786 = _call9:Create(_call756, TweenInfo.new(5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call756.Position.X.Scale + -0.02), 0, -0.1, 0),
+    })
+
+    _call786:Play()
+
+    local _call792 = _call9:Create(_call768, TweenInfo.new(5), {Transparency = 1})
+
+    _call792:Play()
+    _call786.Completed:Connect(function(_798, _798_2, _798_3)
+        _call756:Destroy()
+    end)
+    task.wait(0.138)
+
+    local _ = _call71.Parent
+    local _call803 = Instance.new('Frame')
+
+    _call803.Name = 'AmbientParticle'
+    _call803.Size = UDim2.new(0, 6, 0, 4)
+    _call803.Position = UDim2.new(0.8456268833767657, 0, 1, 0)
+    _call803.BackgroundColor3 = Color3.fromRGB(180, 51, 255)
+    _call803.BackgroundTransparency = 0.3
+    _call803.BorderSizePixel = 0
+    _call803.ZIndex = 2
+    _call803.Parent = _call71
+
+    local _call811 = Instance.new('UICorner')
+
+    _call811.CornerRadius = UDim.new(1, 0)
+    _call811.Parent = _call803
+
+    local _call815 = Instance.new('UIStroke')
+
+    _call815.Color = Color3.fromRGB(255, 100, 50)
+    _call815.Thickness = 1
+    _call815.Transparency = 0.5
+    _call815.Parent = _call803
+
+    local _call833 = _call9:Create(_call803, TweenInfo.new(5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 2, 0, 1),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call803.Position.X.Scale + 0.04), 0, -0.1, 0),
+    })
+
+    _call833:Play()
+
+    local _call839 = _call9:Create(_call815, TweenInfo.new(5), {Transparency = 1})
+
+    _call839:Play()
+    _call833.Completed:Connect(function(_845, _845_2, _845_3)
+        _call803:Destroy()
+    end)
+    task.wait(0.246)
+
+    local _ = _call71.Parent
+    local _call850 = Instance.new('Frame')
+
+    _call850.Name = 'AmbientParticle'
+    _call850.Size = UDim2.new(0, 7, 0, 7)
+    _call850.Position = UDim2.new(0.7536993161003716, 0, 1, 0)
+    _call850.BackgroundColor3 = Color3.fromRGB(180, 144, 255)
+    _call850.BackgroundTransparency = 0.3
+    _call850.BorderSizePixel = 0
+    _call850.ZIndex = 2
+    _call850.Parent = _call71
+
+    local _call858 = Instance.new('UICorner')
+
+    _call858.CornerRadius = UDim.new(1, 0)
+    _call858.Parent = _call850
+
+    local _call862 = Instance.new('UIStroke')
+
+    _call862.Color = Color3.fromRGB(255, 100, 50)
+    _call862.Thickness = 1
+    _call862.Transparency = 0.5
+    _call862.Parent = _call850
+
+    local _call880 = _call9:Create(_call850, TweenInfo.new(7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 2, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call850.Position.X.Scale + -0.002), 0, -0.1, 0),
+    })
+
+    _call880:Play()
+
+    local _call886 = _call9:Create(_call862, TweenInfo.new(7), {Transparency = 1})
+
+    _call886:Play()
+    _call880.Completed:Connect(function(_892, _892_2, _892_3)
+        _call850:Destroy()
+    end)
+    task.wait(0.201)
+
+    local _ = _call71.Parent
+    local _call897 = Instance.new('Frame')
+
+    _call897.Name = 'AmbientParticle'
+    _call897.Size = UDim2.new(0, 4, 0, 7)
+    _call897.Position = UDim2.new(0.4262798585693005, 0, 1, 0)
+    _call897.BackgroundColor3 = Color3.fromRGB(180, 128, 255)
+    _call897.BackgroundTransparency = 0.3
+    _call897.BorderSizePixel = 0
+    _call897.ZIndex = 2
+    _call897.Parent = _call71
+
+    local _call905 = Instance.new('UICorner')
+
+    _call905.CornerRadius = UDim.new(1, 0)
+    _call905.Parent = _call897
+
+    local _call909 = Instance.new('UIStroke')
+
+    _call909.Color = Color3.fromRGB(255, 100, 50)
+    _call909.Thickness = 1
+    _call909.Transparency = 0.5
+    _call909.Parent = _call897
+
+    local _call927 = _call9:Create(_call897, TweenInfo.new(5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 2, 0, 1),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call897.Position.X.Scale + -0.04), 0, -0.1, 0),
+    })
+
+    _call927:Play()
+
+    local _call933 = _call9:Create(_call909, TweenInfo.new(5), {Transparency = 1})
+
+    _call933:Play()
+    _call927.Completed:Connect(function(_939, _939_2, _939_3)
+        error('internal 557: <25ms: infinitelooperror>')
+    end)
+    task.wait(0.273)
+
+    local _ = _call71.Parent
+    local _call943 = Instance.new('Frame')
+
+    _call943.Name = 'AmbientParticle'
+    _call943.Size = UDim2.new(0, 5, 0, 7)
+    _call943.Position = UDim2.new(0.4058001513145538, 0, 1, 0)
+    _call943.BackgroundColor3 = Color3.fromRGB(180, 78, 255)
+    _call943.BackgroundTransparency = 0.3
+    _call943.BorderSizePixel = 0
+    _call943.ZIndex = 2
+    _call943.Parent = _call71
+
+    local _call951 = Instance.new('UICorner')
+
+    _call951.CornerRadius = UDim.new(1, 0)
+    _call951.Parent = _call943
+
+    local _call955 = Instance.new('UIStroke')
+
+    _call955.Color = Color3.fromRGB(255, 100, 50)
+    _call955.Thickness = 1
+    _call955.Transparency = 0.5
+    _call955.Parent = _call943
+
+    local _call973 = _call9:Create(_call943, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 1, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call943.Position.X.Scale + 0.042), 0, -0.1, 0),
+    })
+
+    _call973:Play()
+
+    local _call979 = _call9:Create(_call955, TweenInfo.new(6), {Transparency = 1})
+
+    _call979:Play()
+    _call973.Completed:Connect(function(_985, _985_2, _985_3)
+        _call943:Destroy()
+    end)
+    task.wait(0.288)
+
+    local _ = _call71.Parent
+    local _call990 = Instance.new('Frame')
+
+    _call990.Name = 'AmbientParticle'
+    _call990.Size = UDim2.new(0, 5, 0, 8)
+    _call990.Position = UDim2.new(0.8580938250251228, 0, 1, 0)
+    _call990.BackgroundColor3 = Color3.fromRGB(180, 70, 255)
+    _call990.BackgroundTransparency = 0.3
+    _call990.BorderSizePixel = 0
+    _call990.ZIndex = 2
+    _call990.Parent = _call71
+
+    local _call998 = Instance.new('UICorner')
+
+    _call998.CornerRadius = UDim.new(1, 0)
+    _call998.Parent = _call990
+
+    local _call1002 = Instance.new('UIStroke')
+
+    _call1002.Color = Color3.fromRGB(255, 100, 50)
+    _call1002.Thickness = 1
+    _call1002.Transparency = 0.5
+    _call1002.Parent = _call990
+
+    local _call1020 = _call9:Create(_call990, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 2, 0, 2),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call990.Position.X.Scale + -0.026), 0, -0.1, 0),
+    })
+
+    _call1020:Play()
+
+    local _call1026 = _call9:Create(_call1002, TweenInfo.new(6), {Transparency = 1})
+
+    _call1026:Play()
+    _call1020.Completed:Connect(function(_1032, _1032_2, _1032_3)
+        error('internal 557: <25ms: infinitelooperror>')
+    end)
+    task.wait(0.167)
+
+    local _ = _call71.Parent
+    local _call1036 = Instance.new('Frame')
+
+    _call1036.Name = 'AmbientParticle'
+    _call1036.Size = UDim2.new(0, 6, 0, 7)
+    _call1036.Position = UDim2.new(0.9239528042602999, 0, 1, 0)
+    _call1036.BackgroundColor3 = Color3.fromRGB(180, 132, 255)
+    _call1036.BackgroundTransparency = 0.3
+    _call1036.BorderSizePixel = 0
+    _call1036.ZIndex = 2
+    _call1036.Parent = _call71
+
+    local _call1044 = Instance.new('UICorner')
+
+    _call1044.CornerRadius = UDim.new(1, 0)
+    _call1044.Parent = _call1036
+
+    local _call1048 = Instance.new('UIStroke')
+
+    _call1048.Color = Color3.fromRGB(255, 100, 50)
+    _call1048.Thickness = 1
+    _call1048.Transparency = 0.5
+    _call1048.Parent = _call1036
+
+    local _call1066 = _call9:Create(_call1036, TweenInfo.new(5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 2, 0, 2),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call1036.Position.X.Scale + 0.024), 0, -0.1, 0),
+    })
+
+    _call1066:Play()
+
+    local _call1072 = _call9:Create(_call1048, TweenInfo.new(5), {Transparency = 1})
+
+    _call1072:Play()
+    _call1066.Completed:Connect(function(_1078, _1078_2, _1078_3) end)
+    task.wait(0.226)
+
+    local _ = _call71.Parent
+    local _call1081 = Instance.new('Frame')
+
+    _call1081.Name = 'AmbientParticle'
+    _call1081.Size = UDim2.new(0, 4, 0, 7)
+    _call1081.Position = UDim2.new(0.11518118046132758, 0, 1, 0)
+    _call1081.BackgroundColor3 = Color3.fromRGB(180, 115, 255)
+    _call1081.BackgroundTransparency = 0.3
+    _call1081.BorderSizePixel = 0
+    _call1081.ZIndex = 2
+    _call1081.Parent = _call71
+
+    local _call1089 = Instance.new('UICorner')
+
+    _call1089.CornerRadius = UDim.new(1, 0)
+    _call1089.Parent = _call1081
+
+    local _call1093 = Instance.new('UIStroke')
+
+    _call1093.Color = Color3.fromRGB(255, 100, 50)
+    _call1093.Thickness = 1
+    _call1093.Transparency = 0.5
+    _call1093.Parent = _call1081
+
+    local _call1111 = _call9:Create(_call1081, TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+        Size = UDim2.new(0, 3, 0, 3),
+        BackgroundTransparency = 1,
+        Position = UDim2.new((_call1081.Position.X.Scale + 0.056), 0, -0.1, 0),
+    })
+
+    _call1111:Play()
+
+    local _call1117 = _call9:Create(_call1093, TweenInfo.new(4), {Transparency = 1})
+
+    _call1117:Play()
+    _call1111.Completed:Connect(function(_1123, _1123_2, _1123_3) end)
+    task.wait(0.282)
+
+    local _ = _call71.Parent
+    local _call1126 = Instance.new('Frame')
+
+    _call1126.Name = 'AmbientParticle'
+    _call1126.Size = UDim2.new(0, 6, 0, 8)
+    _call1126.Position = UDim2.new(0.9365597520620599, 0, 1, 0)
+    _call1126.BackgroundColor3 = Color3.fromRGB(180, 144, 255)
+    _call1126.BackgroundTransparency = 0.3
+    _call1126.BorderSizePixel = 0
+    _call1126.ZIndex = 2
+    _call1126.Parent = _call71
+
+    local _call1134 = Instance.new('UICorner')
+
+    _call1134.CornerRadius = UDim.new(1, 0)
+    _call1134.Parent = _call1126
+
+    local _call1138 = Instance.new('UIStroke')
+
+    _call1138.Color = Color3.fromRGB(255, 100, 50)
+    _call1138.Thickness = 1
+    _call1138.Transparency = 0.5
+    _call1138.Parent = _call1126
+
+    local _ = TweenInfo.new
+
+    error('internal 557: <25ms: infinitelooperror>')
+end)
+task.spawn(function(_1145, _1145_2) end)
+task.spawn(function(_1148, _1148_2) end)
+
+local _call1150 = _call395:FindFirstChild('UIStroke')
+
+_call1150.Name = 'VerifyButtonGlow'
+_call59.Parent = game:GetService('CoreGui')
+
+_call59.AncestryChanged:Connect(function(_1156, _1156_2, _1156_3) end)
+_call220.MouseEnter:Connect(function() end)
+_call220.MouseLeave:Connect(function(_1164, _1164_2) end)
+_call395.MouseEnter:Connect(function(_1168) end)
+_call395.MouseLeave:Connect(function(_1172) end)
+_call395.MouseButton1Down:Connect(function(_1176, _1176_2, _1176_3, _1176_4, _1176_5) end)
+_call395.MouseButton1Up:Connect(function(_1180, _1180_2, _1180_3, _1180_4, _1180_5) end)
+_call377.Focused:Connect(function(_1184, _1184_2, _1184_3) end)
+_call377.FocusLost:Connect(function(_1188) end)
+
+_call71.BackgroundTransparency = 1
+
+local _call1194 = _call9:Create(_call71, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {BackgroundTransparency = 0})
+
+_call1194:Play()
+
+_call63.BackgroundTransparency = 1
+
+local _call1202 = _call9:Create(_call63, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {BackgroundTransparency = 0.4})
+
+_call1202:Play()
+_call220.MouseButton1Click:Connect(function() end)
+_call395.MouseButton1Click:Connect(function(_1212, _1212_2) end)
+_call377.FocusLost:Connect(function(_1216, _1216_2, _1216_3, _1216_4) end)
+
+_call346.Visible = false
+_call395.Visible = false
+_call263.Visible = false
+_call326.Visible = false
+_call336.Visible = false
+
+local _call1218 = _call71:FindFirstChild('LoadingOverlay')
+
+_call1218.Visible = true
+
+local _check_key1220 = _5.check_key
+local _call1221 = _check_key1220(nil)
+local _ = _call1221.valid
+local _ = _call1221.message
+local _ = _call1221.message
+
+_call346.Visible = true
+_call395.Visible = true
+_call263.Visible = true
+_call326.Visible = true
+_call336.Visible = true
+
+_call71:FindFirstChild('LoadingOverlay'):Destroy()
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+task.wait(0.1)
+
+local _ = genv.UI_CLOSED
+
+error('internal 557: <25ms: infinitelooperror>')
