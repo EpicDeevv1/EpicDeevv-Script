@@ -1,4 +1,4 @@
-local SpeedHub = loadstring(game:HttpGet('https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library', true))():AddWindow('ELITE HUB X | LEGENDS OF SPEED', {
+local SpeedHub = loadstring(game:HttpGet('https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library', true))():AddWindow('Aetherix Hub | LEGENDS OF SPEED', {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(415, 250),
     can_resize = false,
@@ -11,7 +11,7 @@ local MiscTab = SpeedHub:AddTab('Misc')
 local SettingsTab = SpeedHub:AddTab('Settings')
 
 HomeTab:Show()
-HomeTab:AddLabel('MADE BY SL_GHOST ')
+HomeTab:AddLabel('MADE BY EPICDEEVV ')
 HomeTab:AddLabel('If you have any suggestions please let us know')
 HomeTab:AddLabel('Enjoy the script!')
 
