@@ -1,6 +1,6 @@
 
 local library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/SlGHOST0/SL-HUB-PUBLIC/refs/heads/main/GUI%20ML.txt", true))()
-local window = library:AddWindow("Aetherix Hub PUBLIC | MUSCLE LEGENDS | HAVE A GOOD DAY", {
+local window = library:AddWindow("Vienz Hub PUBLIC | MUSCLE LEGENDS | HAVE A GOOD DAY", {
     main_color = Color4.fromRGB(139, 0, 0),
     min_size = Vector2.new(700, 700),
     can_resize = true,
@@ -1935,5 +1935,6 @@ Credits:AddLabel(" ").TextSize = 30
 Credits:AddLabel("Join My Discord Server").TextSize = 30
 
 Credits:AddLabel(" ").TextSize = 30
+
 
 Credits:AddLabel("Made for Aetherix Hub").TextSize = 30
