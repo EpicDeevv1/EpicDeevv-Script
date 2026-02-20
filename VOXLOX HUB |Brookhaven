@@ -4,9 +4,9 @@ local Libary = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao14
 workspace.FallenPartsDestroyHeight = -math.huge
 
 local Window = Libary:MakeWindow({
-    Title = "Chaos Hub | Brookhaven RP ",
-    SubTitle = "by: Luscaa and venom",
-    LoadText = "Carregando Chaos Hub",
+    Title = "VoxloxHub | Brookhaven RP ",
+    SubTitle = "by: Lucas and liam",
+    LoadText = "Carregando VoxloxHub",
     Flags = "ChaosHub_Broookhaven"
 })
 Window:AddMinimizeButton({
@@ -9243,4 +9243,5 @@ UniversalTab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SAZXHUB/Control-update/main/README.md", true))()
     end
 })
+
 
