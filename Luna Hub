@@ -4,7 +4,7 @@ local Libary = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao14
 workspace.FallenPartsDestroyHeight = -math.huge
 
 local Window = Libary:MakeWindow({
-    Title = "Paradox Hub X | Brookhaven RP ",
+    Title = "Luna Hub| Brookhaven RP ",
     SubTitle = "by: Lucas and liam",
     LoadText = "Carregando VoxloxHub",
     Flags = "ChaosHub_Broookhaven"
@@ -9243,6 +9243,7 @@ UniversalTab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SAZXHUB/Control-update/main/README.md", true))()
     end
 })
+
 
 
 
