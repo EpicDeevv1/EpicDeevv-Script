@@ -1,5 +1,5 @@
 
-local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/lkjhg969/cracked/refs/heads/main/scp/libcreck.luau", true))():AddWindow("                                   ELITE HUB | | PUBLIC ", {
+local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/lkjhg969/cracked/refs/heads/main/scp/libcreck.luau", true))():AddWindow("                                   E LUNA HUB | | PUBLIC ", {
     main_color = Color3.fromRGB(139, 0, 0),
     min_size = Vector2.new(600, 400),
     can_resize = false,
@@ -7,7 +7,7 @@ local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/lkjhg969/c
 })
 local v2 = v1:AddTab("I N F  \226\140\172")
 v2:AddLabel("\227\128\142 INFO \227\128\143\226\159\161\227\128\142 ABOUT \227\128\143\226\159\161\227\128\142 THE \227\128\143\226\159\161\227\128\142 SCRIPT \227\128\143")
-v2:AddLabel("WELCOME TO PARADOX HUBX  \226\152\132\239\184\143")
+v2:AddLabel("WELCOME TO LUNA HUB  \226\152\132\239\184\143")
 v2:AddLabel("\227\128\142 OWNER OF THIS SCRIPT \227\128\143   EPICDEV ")
 v2:AddLabel("Script Made By LucasDevv |", {
     TextColor3 = Color3.fromRGB(255, 255, 255)
