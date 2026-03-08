@@ -1,0 +1,241 @@
+-- Script desofuscated By Sherys Cherrys Your Assistan Personal Evelyn
+
+local fenv = getfenv()
+local env = _G
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local UserInputService = game:GetService("UserInputService")
+local LocalPlayer = Players.LocalPlayer
+
+local screengui = Instance.new("ScreenGui")
+screengui.Name = "TitanHonnyDezz"
+screengui.ResetOnSpawn = false
+screengui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+local iconButton = Instance.new("ImageButton")
+iconButton.Visible = false
+iconButton.Size = UDim2.new(0, 55, 0, 55)
+iconButton.Position = UDim2.new(0.1, 0, 0.5, 0)
+iconButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+iconButton.Image = "rbxassetid://6031068433"
+iconButton.Parent = screengui
+
+local iconCorner = Instance.new("UICorner")
+iconCorner.CornerRadius = UDim.new(1, 0)
+iconCorner.Parent = iconButton
+
+local iconStroke = Instance.new("UIStroke")
+iconStroke.Thickness = 2
+iconStroke.Parent = iconButton
+
+local mainFrame = Instance.new("Frame")
+mainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+mainFrame.Position = UDim2.new(0.5, -110, 0.5, -125)
+mainFrame.Size = UDim2.new(0, 220, 0, 280)
+mainFrame.Parent = screengui
+
+local mainCorner = Instance.new("UICorner")
+mainCorner.CornerRadius = UDim.new(0, 15)
+mainCorner.Parent = mainFrame
+
+local mainStroke = Instance.new("UIStroke")
+mainStroke.Thickness = 2
+mainStroke.Parent = mainFrame
+
+do
+    local dragging = false
+    local dragStart, startPos
+
+    mainFrame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = mainFrame.Position
+        end
+    end)
+
+    mainFrame.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = false
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - dragStart
+            mainFrame.Position = UDim2.new(
+                startPos.X.Scale,
+                startPos.X.Offset + delta.X,
+                startPos.Y.Scale,
+                startPos.Y.Offset + delta.Y
+            )
+        end
+    end)
+end
+
+do
+    local dragging = false
+    local dragStart, startPos
+
+    iconButton.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = iconButton.Position
+        end
+    end)
+
+    iconButton.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = false
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - dragStart
+            iconButton.Position = UDim2.new(
+                startPos.X.Scale,
+                startPos.X.Offset + delta.X,
+                startPos.Y.Scale,
+                startPos.Y.Offset + delta.Y
+            )
+        end
+    end)
+end
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, 0, 0, 40)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "OMEGADEZZ HUB"
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextSize = 18
+titleLabel.Parent = mainFrame
+
+local minimizeBtn = Instance.new("TextButton")
+minimizeBtn.Size = UDim2.new(0, 25, 0, 25)
+minimizeBtn.Position = UDim2.new(1, -35, 0, 8)
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+minimizeBtn.Text = "-"
+minimizeBtn.TextColor3 = Color3.new(1, 1, 1)
+minimizeBtn.Font = Enum.Font.GothamBold
+minimizeBtn.TextSize = 16
+minimizeBtn.Parent = mainFrame
+
+local minimizeCorner = Instance.new("UICorner")
+minimizeCorner.CornerRadius = UDim.new(1, 0)
+minimizeCorner.Parent = minimizeBtn
+
+local buttonFrame = Instance.new("Frame")
+buttonFrame.Position = UDim2.new(0, 10, 0, 50)
+buttonFrame.Size = UDim2.new(0.9, 0, 0, 170)
+buttonFrame.BackgroundTransparency = 1
+buttonFrame.Parent = mainFrame
+
+local listLayout = Instance.new("UIListLayout")
+listLayout.Padding = UDim.new(0, 8)
+listLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+listLayout.Parent = buttonFrame
+
+local creditsLabel = Instance.new("TextLabel")
+creditsLabel.Name = "Credits"
+creditsLabel.Size = UDim2.new(1, 0, 0, 30)
+creditsLabel.Position = UDim2.new(0, 0, 1, -35)
+creditsLabel.BackgroundTransparency = 1
+creditsLabel.Text = "❤️ Created by HonnyDezz ❤️ Deof By Sherya"
+creditsLabel.TextColor3 = Color3.new(1, 1, 1)
+creditsLabel.Font = Enum.Font.GothamBold
+creditsLabel.TextSize = 14
+creditsLabel.Parent = mainFrame
+
+task.spawn(function()
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 0.8, 1)
+        mainStroke.Color = color
+        iconStroke.Color = color
+        titleLabel.TextColor3 = color
+        creditsLabel.TextColor3 = color
+        hue = (hue + 0.01) % 1
+        task.wait(0.03)
+    end
+end)
+
+minimizeBtn.MouseButton1Click:Connect(function()
+    mainFrame.Visible = false
+    iconButton.Visible = true
+end)
+
+iconButton.MouseButton1Click:Connect(function()
+    mainFrame.Visible = true
+    iconButton.Visible = false
+end)
+
+local function createButton(text)
+    local btn = Instance.new("TextButton")
+    btn.Size = UDim2.new(1, 0, 0, 35)
+    btn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    btn.Text = text
+    btn.TextColor3 = Color3.fromRGB(200, 200, 200)
+    btn.Font = Enum.Font.GothamBold
+    btn.TextSize = 13
+    btn.Parent = buttonFrame
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 8)
+    corner.Parent = btn
+
+    return btn
+end
+
+local function activateButton(btn, title)
+    btn.BackgroundColor3 = Color3.fromRGB(0, 200, 100)
+    btn.TextColor3 = Color3.new(1, 1, 1)
+    StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Duration = 2,
+        Text = "ACTIVADO ✅"
+    })
+end
+
+local rebirthBtn = createButton("FAST AUTO REBIRTH")
+rebirthBtn.MouseButton1Click:Connect(function()
+    activateButton(rebirthBtn, "Fast Auto Rebirth")
+    env.AutoRebirth = true
+end)
+
+local farmBtn = createButton("FAST AUTO FARM")
+farmBtn.MouseButton1Click:Connect(function()
+    activateButton(farmBtn, "Fast Auto Farm")
+    env.AutoFarm = true
+end)
+
+local spinBtn = createButton("AUTO SPIN")
+spinBtn.MouseButton1Click:Connect(function()
+    activateButton(spinBtn, "Auto Spin")
+    env.AutoSpin = true
+end)
+
+local afkBtn = createButton("ANTI AFK")
+afkBtn.MouseButton1Click:Connect(function()
+    activateButton(afkBtn, "Anti AFK")
+    local ok, result = pcall(function()
+        return game:HttpGet("https://pastebin.com/raw/r37Ct26d")
+    end)
+    if ok then
+        loadstring(result)()
+    end
+end)
+
+task.spawn(function()
+    local remotes = game:GetService("ReplicatedStorage"):WaitForChild("RemotesEvent")
+    local rebirthEvent = remotes:WaitForChild("RebirthEvent")
+    local machineEvent = remotes:WaitForChild("MachineActiveEvent")
+
+    for _ = 1, 12 do
+        rebirthEvent:FireServer()
+        machineEvent:FireServer()
+        task.wait(0.1)
+    end
+end)
