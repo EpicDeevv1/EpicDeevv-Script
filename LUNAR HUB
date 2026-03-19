@@ -4343,5 +4343,5 @@ Gift:AddButton(
 
 local Credits = window:AddTab("Credits")
 
-Credits:AddLabel("Made by Darkdev👻")
-Credits:AddLabel("Made by DarkXdev👻")
+Credits:AddLabel("Made by iblameahmed👻")
+Credits:AddLabel("Made by iblameahmed👻")
